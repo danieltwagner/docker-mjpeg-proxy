@@ -1,7 +1,8 @@
 FROM node:10-alpine
 MAINTAINER Rolf Larsen
 
-RUN npm i mjpeg-proxy
+RUN apk add python3 make g++
+RUN npm i mjpeg-proxy express
 
 #
 # Define an environment variable
