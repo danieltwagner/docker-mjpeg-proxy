@@ -1,10 +1,7 @@
-FROM node:8.3.0-stretch
+FROM node:10-alpine
 MAINTAINER Rolf Larsen
 
-RUN git clone https://github.com/rhodiumlabs/node-mjpeg-proxy.git \
-#  && cd node-mjpeg-proxy \
-  && npm install express \
-  && npm install mjpeg-proxy
+RUN npm i mjpeg-proxy
 
 #
 # Define an environment variable
